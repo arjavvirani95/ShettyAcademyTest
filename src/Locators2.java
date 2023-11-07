@@ -1,5 +1,7 @@
 import java.time.Duration;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +17,7 @@ public class Locators2 {
 		WebDriver driver = new ChromeDriver();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
 
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
@@ -31,6 +34,12 @@ public class Locators2 {
 		
 		System.out.println(driver.findElement(By.cssSelector("div[class=\"login-container\"] h2")).getText());
 		Assert.assertEquals(driver.findElement(By.cssSelector("div[class=\"login-container\"] h2")).getText(), "Hello "+name+","); 
+		
+		driver.findElement(By.xpath("//button[text()='Log Out']")).click();
+		Thread.sleep(2000);
+		System.out.println("We are on " + driver.findElement(By.xpath("//h1[text()='Sign in']")).getText()+" page now");
+		Assert.assertEquals(driver.findElement(By.xpath("//h1[text()='Sign in']")).getText(), "Sign in");
+		
 		driver.quit();
 	}
 
