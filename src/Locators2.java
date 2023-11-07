@@ -8,6 +8,8 @@ import org.testng.Assert;
 public class Locators2 {
 
 	public static void main(String[] args) throws InterruptedException {
+		
+		String name = "rahul";
 		System.setProperty("webdriver.chromer.driver", "D:\\SeleniumJars\\chromedriver");
 
 		WebDriver driver = new ChromeDriver();
@@ -16,7 +18,7 @@ public class Locators2 {
 
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
-		driver.findElement(By.id("inputUsername")).sendKeys("rahul");
+		driver.findElement(By.id("inputUsername")).sendKeys(name);
 
 		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
 
@@ -25,9 +27,10 @@ public class Locators2 {
 		Thread.sleep(2000);
 
 		System.out.println(driver.findElement(By.tagName("p")).getText());
-		
 		Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
 		
+		System.out.println(driver.findElement(By.cssSelector("div[class=\"login-container\"] h2")).getText());
+		Assert.assertEquals(driver.findElement(By.cssSelector("div[class=\"login-container\"] h2")).getText(), "Hello "+name+","); 
 		driver.quit();
 	}
 
