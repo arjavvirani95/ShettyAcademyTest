@@ -10,10 +10,7 @@ public class StaticDropDown {
 		
 		System.setProperty("webdriver.chromer.driver", "D:\\SeleniumJars\\chromedriver");
 		WebDriver driver = new ChromeDriver();
-		// Sibling - Child to parent traverse
-
-		//header/div/button[1]/following-sibling::button[1]
-
+		// Static drop down practice
 		driver.get("https://www.rahulshettyacademy.com/dropdownsPractise/");
 		Thread.sleep(1000);
 		driver.manage().window().maximize();
