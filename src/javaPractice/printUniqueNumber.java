@@ -1,3 +1,4 @@
+package javaPractice;
 import java.util.ArrayList;
 
 public class printUniqueNumber {

@@ -5,7 +5,7 @@ public class WindowActivities {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chromer.driver", "D:\\SeleniumJars\\chromedriver");
+		//System.setProperty("webdriver.chromer.driver", "D:\\SeleniumJars\\chromedriver");
 		WebDriver driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();

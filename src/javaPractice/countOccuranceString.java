@@ -1,3 +1,4 @@
+package javaPractice;
 
 public class countOccuranceString {
 
