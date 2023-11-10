@@ -1,6 +1,6 @@
 package javaPractice;
 
-public class reverseString {
+public class reverseStringNPalindrome {
 
 	public static void main(String[] args) {
 		// reverse String "arjav"
