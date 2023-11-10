@@ -3,7 +3,7 @@ package javaPractice;
 public class reverseString {
 
 	public static void main(String[] args) {
-		// reverse stirng "arjav"
+		// reverse String "arjav"
 		String s = "arjav";
 		String t = "";
 		//System.out.println(s.length());

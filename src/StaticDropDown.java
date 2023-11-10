@@ -14,8 +14,10 @@ public class StaticDropDown {
 		driver.get("https://www.rahulshettyacademy.com/dropdownsPractise/");
 		Thread.sleep(1000);
 		driver.manage().window().maximize();
+		
 		WebElement currency = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
 		Select dropdown = new Select(currency);
+		
 		dropdown.selectByValue("USD");
 		WebElement passengers = driver.findElement(By.id("divpaxinfo"));
 		passengers.click();
