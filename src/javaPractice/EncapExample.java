@@ -25,7 +25,7 @@ public class EncapExample {
 		//using object pass new name
 		enob.setEmpName("arjav");
 		//using object getting and printing name
-		System.out.println(enob.getEmpName());
+		System.out.println(enob.getEmpName()); 
 
 	}
 
